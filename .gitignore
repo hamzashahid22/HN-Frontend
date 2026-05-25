@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+.expo/
+dist/
+*.log
+.env
+.env.*
+android/
+ios/
