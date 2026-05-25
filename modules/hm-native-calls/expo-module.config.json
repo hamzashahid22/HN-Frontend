@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["HmNativeCallsModule"]
+  },
+  "android": {
+    "modules": ["com.homenet.nativecalls.HmNativeCallsModule"]
+  }
+}

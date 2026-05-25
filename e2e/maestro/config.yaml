@@ -1,0 +1,11 @@
+appId: com.homenet.messenger
+name: Homenet Messenger E2E
+env:
+  TEST_PHONE_A: "+15550001001"
+  TEST_PHONE_B: "+15550001002"
+  TEST_PASSWORD: "Password123!"
+  TEST_DISPLAY_NAME_A: "E2E Alice"
+  TEST_USER_B_ID: "replace-with-seeded-user-b-id"
+  TEST_GROUP_NAME: "E2E Group"
+  TEST_GROUP_MEMBER_IDS: "replace-with-seeded-user-b-id"
+  TEST_DIRECT_CONVERSATION_ID: "replace-with-seeded-direct-conversation-id"

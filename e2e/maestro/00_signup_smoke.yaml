@@ -1,0 +1,22 @@
+appId: com.homenet.messenger
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Welcome back"
+- tapOn:
+    id: "login-create-account"
+- assertVisible: "Create your account"
+- tapOn:
+    id: "signup-display-name"
+- inputText: "${TEST_DISPLAY_NAME_A}"
+- tapOn:
+    id: "signup-phone"
+- inputText: "${TEST_PHONE_A}"
+- tapOn:
+    id: "signup-password"
+- inputText: "${TEST_PASSWORD}"
+- tapOn:
+    id: "signup-submit"
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000

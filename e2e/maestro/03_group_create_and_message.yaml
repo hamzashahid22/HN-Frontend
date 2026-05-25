@@ -1,0 +1,32 @@
+appId: com.homenet.messenger
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000
+- tapOn: "New Chat"
+- assertVisible: "New group"
+- tapOn:
+    id: "new-chat-group-name"
+- inputText: "${TEST_GROUP_NAME}"
+- tapOn:
+    id: "new-chat-group-members"
+- inputText: "${TEST_GROUP_MEMBER_IDS}"
+- tapOn:
+    id: "new-chat-create-group"
+- extendedWaitUntil:
+    visible: "Group created."
+    timeout: 15000
+- tapOn: "Chats"
+- extendedWaitUntil:
+    visible: "${TEST_GROUP_NAME}"
+    timeout: 15000
+- tapOn: "${TEST_GROUP_NAME}"
+- tapOn:
+    id: "chat-message-input"
+- inputText: "group hello from maestro"
+- tapOn:
+    id: "chat-send"
+- extendedWaitUntil:
+    visible: "group hello from maestro"
+    timeout: 15000

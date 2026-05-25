@@ -1,0 +1,16 @@
+appId: com.homenet.messenger
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Welcome back"
+- tapOn:
+    id: "login-phone"
+- inputText: "${TEST_PHONE_A}"
+- tapOn:
+    id: "login-password"
+- inputText: "${TEST_PASSWORD}"
+- tapOn:
+    id: "login-submit"
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000

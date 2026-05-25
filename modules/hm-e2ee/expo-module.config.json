@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["HmE2eeModule"]
+  },
+  "android": {
+    "modules": ["com.homenet.e2ee.HmE2eeModule"]
+  }
+}

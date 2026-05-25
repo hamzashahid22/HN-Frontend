@@ -1,0 +1,20 @@
+appId: com.homenet.messenger
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000
+- tapOn: "Calls"
+- assertVisible: "Calls"
+- tapOn:
+    id: "calls-callee-user-id"
+- inputText: "${TEST_USER_B_ID}"
+- tapOn:
+    id: "calls-conversation-id"
+- inputText: "${TEST_DIRECT_CONVERSATION_ID}"
+- tapOn:
+    id: "calls-start-direct"
+- extendedWaitUntil:
+    visible: "Audio Call"
+    timeout: 20000
+- assertVisible: "Connecting..."

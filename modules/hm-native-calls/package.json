@@ -1,0 +1,19 @@
+{
+  "name": "hm-native-calls",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true,
+  "expo-module": {
+    "ios": {
+      "modules": ["HmNativeCallsModule"]
+    },
+    "android": {
+      "modules": ["com.homenet.nativecalls.HmNativeCallsModule"]
+    }
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "expo-modules-core": "*"
+  }
+}

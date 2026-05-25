@@ -1,0 +1,30 @@
+appId: com.homenet.messenger
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000
+- tapOn: "Chats"
+- tapOn:
+    id: "conversation-${TEST_DIRECT_CONVERSATION_ID}"
+- extendedWaitUntil:
+    visible: "Encrypted message"
+    timeout: 15000
+- tapOn:
+    id: "chat-message-input"
+- inputText: "cache sync maestro"
+- tapOn:
+    id: "chat-send"
+- extendedWaitUntil:
+    visible: "cache sync maestro"
+    timeout: 15000
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible: "Chats"
+    timeout: 15000
+- tapOn:
+    id: "conversation-${TEST_DIRECT_CONVERSATION_ID}"
+- extendedWaitUntil:
+    visible: "cache sync maestro"
+    timeout: 15000
